@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Band Generator</title>
+  <!-- Add Header -->
+  <%- include('partials/header.ejs') %>
+</head>
+<body>
+  <main>
+    <h1>
+      <!-- If 'randomName' exists, show it -->
+      <% if (randomName) { %>
+        <%= randomName %>
+      <!-- Otherwise, show the default message -->
+      <% } else { %>
+        Generate a random name!
+      <% } %>
+    </h1>
+    
+    <form action="/submit" method="POST">
+      <input type="submit" value="Generate Name">
+    </form>
+
+    <!-- Add Footer -->
+    <%- include('partials/footer.ejs') %>
+  </main>
+</body>
+</html>

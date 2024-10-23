@@ -1,0 +1,15 @@
+</main>
+
+<footer>
+  <!-- Step 4 - Add a dynamic year to the footer using JS. -->
+  <p>&copy; <span id="currentYear"></span> Your Company Name</p>
+</footer>
+<script>
+  // JS to dynamically add the current year
+  const yearElement = document.getElementById('currentYear');
+  const currentYear = new Date().getFullYear();
+  yearElement.textContent = currentYear;
+</script>
+</body>
+
+</html>
